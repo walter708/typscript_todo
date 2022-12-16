@@ -1,0 +1,14 @@
+### Fetch all tasks
+
+GET http://localhost:3200/tasks
+Content-Type: application/json
+
+POST http://localhost:3200/tasks
+Content-Type: application/json
+{
+  "title":"is simply dummy text of the",
+  "date":"2018-12-10T13:49:51.141Z",
+  "description":"standard dummy text ever since the 1500s",
+  "priority":"Medium",
+  "status":"todo"
+}

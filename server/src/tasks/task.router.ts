@@ -1,4 +1,6 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
+import { taskController } from './task.controller';
+import { createValidator } from './task.validator';
 
 // The router module helps us create a new router
 
@@ -6,6 +8,6 @@ import { Request, Response, Router } from 'express';
 
 export const taskRouter: Router = Router();
 
-taskRouter.get('/task', (req: Request, res: Response) => {
-  res.send('Express + Typescript server');
-});
+taskRouter.get('/tasks', taskController.getAll);
+
+taskRouter.post('/tasks', createValidator, taskController.create);
