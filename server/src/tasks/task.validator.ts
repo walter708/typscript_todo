@@ -27,6 +27,20 @@ export const createValidator: ValidationChain[] = [
 
   body('status')
     .trim()
-    .isIn([Status.Completed, Status.InProgress, Status.todo])
+    .isIn([Status.Completed, Status.InProgress, Status.Todo])
     .withMessage('status can only be completed, in progress, or todo'),
+];
+
+export const updataValidator = [
+  body('id')
+    .not()
+    .isEmpty()
+    .withMessage('The id is mandatory')
+    .trim()
+    .isString()
+    .withMessage('ID must be a valid uuid string'),
+  body('status')
+    .trim()
+    .isIn([Status.Completed, Status.InProgress, Status.Todo])
+    .withMessage('Status can only be completed, in progress, or todo'),
 ];

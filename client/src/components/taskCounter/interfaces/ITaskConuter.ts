@@ -1,7 +1,7 @@
-import { Status } from "../../createTaskForm/enums/Status"
+import { Status } from '../../createTaskForm/enums/Status';
 
-export type  TaskStatusType = Status.Todo | Status.Inprogress | Status.Completed
-export interface ITaskCounter{
-  count?:number 
-  status?:TaskStatusType
+export type TaskStatusType = Status.Todo | Status.InProgress | Status.Completed;
+export interface ITaskCounter {
+  count?: number;
+  status?: TaskStatusType;
 }

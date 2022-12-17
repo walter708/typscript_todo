@@ -10,5 +10,14 @@ Content-Type: application/json
   "date":"2018-12-10T13:49:51.141Z",
   "description":"standard dummy text ever since the 1500s",
   "priority":"Medium",
-  "status":"todo"
+  "status":"InProgress"
 }
+
+PUT http://localhost:3200/tasks
+Content-Type: application/json
+{
+   "id":"2cef52eb-8a28-4db2-ad79-62f2b6e08a94",
+   "status":"InProgress"
+}
+
+

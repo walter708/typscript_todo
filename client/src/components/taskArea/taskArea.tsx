@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import { Grid, Box, Typography } from '@mui/material';
 import { TaskCounter } from '../taskCounter/taskCounter';
 import { Task } from '../task/task';
+import { useQuery } from '@tanstack/react-query';
 
 export const TaskArea: FC = (): ReactElement => {
   return (
