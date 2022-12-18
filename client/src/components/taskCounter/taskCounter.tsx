@@ -8,7 +8,7 @@ import { emmitCorrectLabel } from './helper/emmitCorrectLabel';
 import PropTypes from 'prop-types';
 
 export const TaskCounter: FC<ITaskCounter> = (props): ReactElement => {
-  const { count = 10, status = Status.Todo } = props;
+  const { count = undefined, status = Status.Todo } = props;
   return (
     <Box
       display="flex"

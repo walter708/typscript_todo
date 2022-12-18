@@ -22,7 +22,7 @@ const returnCorrectRequest = (method: Method, data: unknown): RequestInit => {
 export const sendApiRequest = async <T>(
   url: string,
   method: Method,
-  data: unknown,
+  data?: unknown,
 ): Promise<T> => {
   const response = await fetch(url, returnCorrectRequest(method, data));
   if (!response.ok) {

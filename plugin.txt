@@ -1,2 +1,4 @@
 Inline Parameters for VSCode -- lables Parameters
 httpYac - Rest Client 
+eslint --init
+npm i eslint

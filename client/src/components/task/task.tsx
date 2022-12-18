@@ -5,17 +5,17 @@ import { TaskDescription } from './_taskDescription';
 import { TaskFooter } from './_taskFooter';
 import { ITask } from './interfaces/ITask';
 import { Priority } from '../createTaskForm/enums/Priority';
-// import { Status } from '../createTaskForm/enums/Status';
+import { Status } from '../createTaskForm/enums/Status';
 import { renderPriorityBorderColor } from './helper/renderPriorityBorderColor';
 
 export const Task: FC<ITask> = (props): ReactElement => {
   const {
-    // id = 1
+    id,
     title = 'A title',
     date = new Date(),
     description = 'Get the couch ',
     priority = Priority.High,
-    // status = Status.Completed,
+    status = Status.Completed,
     onStatusChange = (e) => console.log(e),
     onClick = (e) => console.log(e),
   } = props;
@@ -37,7 +37,12 @@ export const Task: FC<ITask> = (props): ReactElement => {
     >
       <TaskHeader title={title} date={date} />
       <TaskDescription description={description} />
-      <TaskFooter onStatusChange={onStatusChange} onClick={onClick} />
+      <TaskFooter
+        id={id}
+        onStatusChange={onStatusChange}
+        onClick={onClick}
+        status={status}
+      />
     </Box>
   );
 };
